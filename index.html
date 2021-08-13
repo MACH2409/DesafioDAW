@@ -1,33 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<title> Universidad Don Bosco</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/Registro.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <script src="JS/Registro.js"></script>
-    <script src="JS/departamentos.js"></script>
+<title>Inicio | Taller 1</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="CSS/css.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
-<body>
-<div class="ContenedorGeneral">
-	<div class="Titulo">
-		<h2>Bolsa de Trabajo</h2>
-	</div>
-	<div class="ContenedorFormulario">
-		<section class="Indicaciones">
-			<p>Favor rellene los siguientes campos</p>
-		</section>
-		<section class="Formulario">
-			<form action="javascript:void(0);" name="frmpais" id="frmpais">
-		        <span class="espaciado"><i class="space"></i></span>
+	<body>
+	
+	<section class="principal">
+		<h1>Bolsa de trabajo básica</h1>
+	
+		<article>
+			<form name="frmpais" id="frmpais">
+				
+			  
+				<fieldset id="fldcar" class="group">
+						<legend><span class="labelgroup">Datos</span></legend>
+				
+					<span class="espaciado"><i class="space"></i></span>
 		        <input type="text" name="nombre" id="nombre" required="required" placeholder="Nombre" class="field" />
 		        <span class="espaciado"><i class="space"></i></span>
 		        <input type="text" name="apellido" id="apellido" required="required" placeholder="Apellido" class="field" />
-		        <select name="selpaisnac" id="selpaisnac">
+		        <span class="espaciado"><i class="space"></i></span>
+		        
+		        <input type="number" name="edad" id="edad" required="required" placeholder="Edad" class="field" />
+		        <span class="espaciado"><i class="space"></i></span>
+		        <br>
+		        <label for="email">Email:</label>
+		        <input type="text" name="email" id="email" required="required" placeholder="Email" class="field" />
+			    <br><br>
+			    <div class="nacimiento">
+			    	<p>Fecha de Nacimiento</p>
+			    	<input type="date" name="fechadeNacer" class="FechaNacer">
+			    </div><br>
+			   
+			    <span class="espaciado"><i class="space"></i></span>
+		        <input type="number" name="telefonocasa" id="telefonocasa" required="required" placeholder="Teléfono de Casa" class="field" />
+		        <span class="espaciado"><i class="space"></i></span>
+		        <input type="number" name="telefonocelular" id="telefonocelular" required="required" placeholder="Teléfono Celular" class="field" />
+		        <span class="espaciado"><i class="space"></i></span>
+		        <input type="text" name="domicilio" id="domicilio" required="required" placeholder="Domicilio" class="field" />
+		        <br><br>
+					<label for="selfab">País de nacimiento: </label>
+					<select name="selpaisnac" id="selpaisnac">
 						<option value="El Salvador">El Salvador</option>
 						<option value="Nicaragua">Nicaragua</option>
 						<option value="Honduras">Honduras</option>
@@ -35,24 +53,7 @@
 						<option value="Costa Rica">Costa Rica</option>
 						<option value="Panamá">Panamá</option>
 						
-			    </select>
-		        <span class="espaciado"><i class="space"></i></span>
-		        <input type="number" name="edad" id="edad" required="required" placeholder="Edad" class="field" />
-		        <span class="espaciado"><i class="space"></i></span>
-		        <input type="text" name="email" id="email" required="required" placeholder="Email" class="field" />
-			    <div class="genero">
-			    	<p>Género:</p>
-			        <input type="radio" value="Masculino" id="radioOne" name="chkgender" />
-			        <label for="radioOne" class="radio" chec>Masculino</label>
-
-			        <input type="radio" value="Femenino" id="radioTwo" name="chkgender" />
-			        <label for="radioTwo" class="radio">Femenino</label>
-			    </div>
-			    <div class="nacimiento">
-			    	<p>Fecha de Nacimiento</p>
-			    	<input type="date" name="fechadeNacer" class="FechaNacer">
-			    </div>
-			    </select>
+					</select><br><br>
 					<label for="selfab">País de residencia: </label>
 					<select name="selpais" id="selpais">
 						<option value="El Salvador">El Salvador</option>
@@ -73,28 +74,33 @@
 						<option value="Cuscatlán">Cuscatlán</option>
 						<option value="San Salvador">San Salvador</option>
 						<option value="Usulután">Usulután</option>
+						
 					</select>
-			    <span class="espaciado"><i class="space"></i></span>
-		        <input type="number" name="telefonocasa" id="telefonocasa" required="required" placeholder="Teléfono de Casa" class="field" />
-		        <span class="espaciado"><i class="space"></i></span>
-		        <input type="number" name="telefonocelular" id="telefonocelular" required="required" placeholder="Teléfono Celular" class="field" />
-		        <span class="espaciado"><i class="space"></i></span>
-		        <input type="text" name="domicilio" id="domicilio" required="required" placeholder="Domicilio" class="field" />
-			    <div class="btn">
-				    <input type="button" name="btnSend" id="btnSend" value="Registrarse" />
-			    </div>
+					
+					
+					
+					<br><br>
+					<label for="radgenero" class="generos">Género:</label><br />
+					<br>
+					<input type="radio" value="Hombre" alt="Marque su género" id="radgenero "
+					name="radcolor" checked/>
+					<label for="radgenero" class="generos">Hombre</label><br>
+					<input type="radio" value="Mujer" alt="Marque su género" id="radgenero"
+					name="radcolor" />
+					<label for="radgenero" class="colores">Mujer</label><br>
+					
+
+					<input type="button" name="btnEnviar" id="enviar" value="Enviar" />
+				</fieldset>
 			</form>
 			</article>
 			<div id="infotrabajador"></div>
 			<article>
-		</section>
-		<section class="Formulario">
-			<form action="javascript:void(0);" name="form" id="UDB">
-		        
-			</form>
-			<div id="infotrabajador2"></div>
-		</section>
-	</div>
-</div>
+		</article>
+	</section>
+
+	
 </body>
+	<script src="JS/departamentos.js"></script>
 </html>
+		
