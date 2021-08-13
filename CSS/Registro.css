@@ -1,56 +1,68 @@
 *{
-	margin: 0px;
-	padding: 0px;
+	margin:0;
+	padding: 0;
+	position: relative;
+	font-family: 'Monteserrat', sans-serif;
+	color:  white;
 }
 
-body{
-	background-color: #1976D2;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 0.9vw;
-}
-
-.ContenedorGeneral{
-	display: block;
-	margin: auto;
-	margin-top: 12vh;
-	width: 80%;
-}
-.Titulo{
-	display: block;
-	margin: auto;
-	text-align: center;
-}
-h2{
-	color:#FFDF00;
-	font-size: 2vw;
-}
-
-.ContenedorFormulario{
-	display: block;
-	margin: auto;
-	margin-top: 8vh;
-	width: 75%;
-}
-.Indicaciones{
-	display: block;
-	margin: auto;
-	text-align: center;
-	color: white;
-}
-
-.Formulario{
-	background-color: white;
-	padding: 1vw;
+.principal{
+	background-image: url('fondo5.jpg');
+	width: 100%;
+	  height: 110vh;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	display: flex;
+	
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	display: block;
-	margin: auto;
-	margin-top: 5vh;
-	width: 65%;
+
+}
+.principal:before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	position: absolute;
+	opacity: 0.5;
 }
 
-.btn{
-	margin-top: 0.5vh;
-	display: block;
-	margin: auto;
-	width: 25%;
+.principal h1{
+	position: relative;
+	font-size: 30px;
+	text-align: center;
+
+	color: white;
+	
+}
+select{
+	color: black;
+}
+fieldset{
+
+	padding: 2%;
+}
+option{
+	color: black;
+}
+input{
+	color:  black;
+}
+#infotrabajador{
+	color: black;
+}
+
+#enviar{
+	margin-top: 2%;
+	padding: 1% 5%;
+	background-color: white;
+	color: darkgreen;
+	transition: 0.5s;
+}
+#enviar:hover{
+	background-color: darkgreen;
+	color: white;
+	cursor: pointer;
 }
