@@ -1,0 +1,56 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background-color: #1976D2;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.9vw;
+}
+
+.ContenedorGeneral{
+	display: block;
+	margin: auto;
+	margin-top: 12vh;
+	width: 80%;
+}
+.Titulo{
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+h2{
+	color:#FFDF00;
+	font-size: 2vw;
+}
+
+.ContenedorFormulario{
+	display: block;
+	margin: auto;
+	margin-top: 8vh;
+	width: 75%;
+}
+.Indicaciones{
+	display: block;
+	margin: auto;
+	text-align: center;
+	color: white;
+}
+
+.Formulario{
+	background-color: white;
+	padding: 1vw;
+	align-items: center;
+	display: block;
+	margin: auto;
+	margin-top: 5vh;
+	width: 65%;
+}
+
+.btn{
+	margin-top: 0.5vh;
+	display: block;
+	margin: auto;
+	width: 25%;
+}
