@@ -26,14 +26,16 @@ function iniciar(){
 			var seleccion = showRadioSelected(document.frmpais.radgenero);
 			pais.pedido(document.frmpais.selpais.value, document.frmpais.seldep.value, document.frmpais.nombre.value, document.frmpais.apellido.value, document.frmpais.selpaisnac.value,
 				document.frmpais.edad.value, document.frmpais.email.value, document.frmpais.fechadeNacer.value, document.frmpais.telefonocasa.value, document.frmpais.telefonocelular.value, 
-				document.frmpais.domicilio.value);
+				document.frmpais.domicilio.value, document.frmpais.radgenero.value);
 			pais.mostrar();
 		}, false);
 	}
 	else{
 		button.attachEvent("onclik", function(){
 			var seleccion = showRadioSelected(document.frmpais.radgenero);
-			pais.pedido(document.frmpais.selpais.value, document.frmpais.seldep.value);
+			pais.pedido(document.frmpais.selpais.value, document.frmpais.seldep.value, document.frmpais.nombre.value, document.frmpais.apellido.value, document.frmpais.selpaisnac.value,
+				document.frmpais.edad.value, document.frmpais.email.value, document.frmpais.fechadeNacer.value, document.frmpais.telefonocasa.value, document.frmpais.telefonocelular.value, 
+				document.frmpais.domicilio.value, document.frmpais.radgenero.value);
 			pais.mostrar();
 		});
 	}
@@ -70,8 +72,9 @@ pais.fn= "";
 pais.tel = "";
 pais.cell = "";
 pais.domi="";
+pais.gene="";
 //Métodos del objeto
-pais.pedido = function(paisnac, mod, nam, ape, paisn, ed, mail, fnac, casa, cel, dom){
+pais.pedido = function(paisnac, mod, nam, ape, paisn, ed, mail, fnac, casa, cel, dom, gen){
 	pais.paisnac = paisnac;
 	pais.modelo = mod;
 	pais.name=nam;
@@ -83,6 +86,7 @@ pais.pedido = function(paisnac, mod, nam, ape, paisn, ed, mail, fnac, casa, cel,
 	pais.tel = casa;
 	pais.cell=cel;
 	pais.domi= dom;
+	pais.gene= gen;
 }
 //Función para mostrar los datos
 pais.mostrar = function(){
@@ -125,6 +129,9 @@ pais.mostrar = function(){
 
 	tabla += "\t<tr>\n\t\t<td>Celular: </td>\n";
 	tabla += "\t\t<td>" + pais.domi + "</td>\n\t</tr>\n";
+
+	tabla += "\t<tr>\n\t\t<td>Género: </td>\n";
+	tabla += "\t\t<td>" + pais.gene + "</td>\n\t</tr>\n";
 
 	info.innerHTML = tabla;
 }
